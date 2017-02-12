@@ -4,16 +4,19 @@ public class Jet{
 	protected String model;
 	protected double speed, distance;
 	protected int cap;
-	protected Pilot bob = new Pilot();
+	private String thing;
+	protected String pilot;
 
 	public Jet(String model, double speed, double distance, int cap){
 		this.model = model;
-		this.speed = speed * .0013;
+		this.speed = speed * 0.00130332;
 		this.distance = distance;
 		this.cap = cap;
 		}
 
-		public Jet(){}
+	public Jet(){
+		this.thing = thing;
+	}
 	
 	public String getModel() {
 		return model;
@@ -28,7 +31,7 @@ public class Jet{
 	}
 
 	public void setSpeed(double speed) {
-		this.speed = speed;
+		this.speed = speed * 0.00130332;
 	}
 
 	public double getDistance() {
@@ -47,18 +50,18 @@ public class Jet{
 		this.cap = cap;
 	}
 
-	public Pilot getBob() {
-		return bob;
+	public String getPilot() {
+		return pilot;
 	}
 
-	public void setBob(Pilot bob) {
-		this.bob = bob;
+	public void setPilot(String pilot) {
+		this.pilot = pilot;
 	}
 
 	@Override
 	public String toString() {
-		return "A " + model + ", with a speed of " + speed + ", a range of " + distance 
-				+ " and can hold up to " + cap + "people. "+ "the current pilot of this jet is "
-				+ bob;
+		return "A " + model + ", with a speed of mach " + speed + ", a range of " + distance 
+				+ " and can hold up to " + cap + " people. "+ "the current pilot of this jet is "
+				+ pilot;
 	}	
 }

@@ -18,31 +18,30 @@ public class Menu {
 		switch(choice){
 		case 1 : {
 			jet.list();
-			start();
 			break;
 			}
 		case 2 : {
 			jet.fastest();
-			start();
 			break;
 		}
 		case 3 : {
 			jet.longest();
-			start();
 			break;
 			}
-		case 4 : {
-			String model = null;
-			double speed = 0, distance = 0;
-			int cap = 0;
-			jet.add(model, speed, distance, cap);
-			start();
-			break;
-		}
+		case 4 : {	
+			jet.add();
+				System.out.println("Your jet has been added to the fleet for this session, " 
+									+ "if your have an actual jet you would like to see " 
+									+  "added permanently please see the ");
+				System.out.println("fleet manager for assistance.");
+				
+				break;
+			}
 		case 5: {
 			System.out.println("Have a nice day");
 			return;
 			}
 		}
+		start();
 	}
 }
