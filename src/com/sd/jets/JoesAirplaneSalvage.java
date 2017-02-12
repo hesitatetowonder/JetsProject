@@ -28,11 +28,13 @@ public class JoesAirplaneSalvage extends Jet{
 
 	public void list(){
 		System.out.println("The fleet consist of :");
+		for(int j = 0; j < 5; j++){
+			hangar[j].pilot = ace.makePilot();
+		}
 		for(int i = 0; i < hangar.length; i++){
 			if(hangar[i] == null){
 				break;
 			}
-			hangar[i].pilot = ace.makePilot();
 			System.out.println(hangar[i]);
 		}
 	}	
@@ -73,8 +75,14 @@ public class JoesAirplaneSalvage extends Jet{
 		distance = kb.nextDouble();
 		System.out.print("Price : ");
 		int price = kb.nextInt();
+		System.out.print("Please hire a pilot for your Jet. If you have your own pilot,");
+		System.out.println("please enter his/her name below.  Or choose from one of our");
+		System.out.print("Steve, Rob, Aaron, Chris and Cole.  Enter name : ");
+		String pilot = kb.next();
 		
-		hangar[counter] = new Jet(model, speed, distance, price);
+		
+		hangar[counter] = new Jet(model, speed, distance, price);	
+		hangar[counter].setPilot(pilot);
 		System.out.println(hangar[counter]);
 		counter++;
 	}

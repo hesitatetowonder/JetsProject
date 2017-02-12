@@ -4,7 +4,6 @@ public class Jet{
 	protected String model;
 	protected double speed, distance;
 	protected int price;
-	private String thing;
 	protected String pilot;
 
 	public Jet(String model, double speed, double distance, int price){
@@ -15,7 +14,7 @@ public class Jet{
 		}
 
 	public Jet(){
-		this.thing = thing;
+
 	}
 	
 	public String getModel() {
