@@ -4,7 +4,7 @@ package com.sd.jets;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class JoesAirplaneSalvage extends Jet{
+public class JoesAirplaneSalvage {
 	Scanner kb = new Scanner(System.in);
 	Pilot ace = new Pilot();
 	double mph;
@@ -68,11 +68,11 @@ public class JoesAirplaneSalvage extends Jet{
 	public void add(){
 		System.out.println("I need the info for your new jet: ");
 		System.out.print("Make/Model of jet : ");
-		model = kb.next();
+		String model = kb.next();
 		System.out.print("Speed(in mph) : ");
-		speed = kb.nextDouble();
+		double speed = kb.nextDouble();
 		System.out.print("Range : ");
-		distance = kb.nextDouble();
+		double distance = kb.nextDouble();
 		System.out.print("Price : ");
 		int price = kb.nextInt();
 		System.out.print("Please hire a pilot for your Jet. If you have your own pilot,");
