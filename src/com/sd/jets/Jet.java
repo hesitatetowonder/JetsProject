@@ -3,15 +3,15 @@ package com.sd.jets;
 public class Jet{
 	protected String model;
 	protected double speed, distance;
-	protected int cap;
+	protected int price;
 	private String thing;
 	protected String pilot;
 
-	public Jet(String model, double speed, double distance, int cap){
+	public Jet(String model, double speed, double distance, int price){
 		this.model = model;
 		this.speed = speed * 0.00130332;
 		this.distance = distance;
-		this.cap = cap;
+		this.price = price;
 		}
 
 	public Jet(){
@@ -42,12 +42,12 @@ public class Jet{
 		this.distance = distance;
 	}
 
-	public int getCap() {
-		return cap;
+	public int getPrice() {
+		return price;
 	}
 
-	public void setCap(int cap) {
-		this.cap = cap;
+	public void setPrice(int price) {
+		this.price = price;
 	}
 
 	public String getPilot() {
@@ -61,7 +61,7 @@ public class Jet{
 	@Override
 	public String toString() {
 		return "A " + model + ", with a speed of mach " + speed + ", a range of " + distance 
-				+ " and can hold up to " + cap + " people. "+ "the current pilot of this jet is "
+				+ " and cost " + price + " the current pilot of this jet is "
 				+ pilot;
 	}	
 }

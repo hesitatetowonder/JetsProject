@@ -13,11 +13,11 @@ public class JoesAirplaneSalvage extends Jet{
 	Jet[] hangar = new Jet[100];	
 	{
 
-	hangar[0] = new Jet("Gulfstream IV-SP", 675, 4890, 12);
-	hangar[1] = new Jet("Honda HA-420 HondaJet", 483, 1358, 6);
-	hangar[2] = new Jet("Learjet 45XR", 535, 2300, 9);
-	hangar[3] = new Jet("Beechcraft Premier IA", 526, 1645, 6);
-	hangar[4] = new Jet("Cessna Citation CJ4", 519 , 2259, 9);
+	hangar[0] = new Jet("Gulfstream IV-SP", 675, 4890, 6700000);
+	hangar[1] = new Jet("Honda HA-420 HondaJet", 483, 1358, 45000000);
+	hangar[2] = new Jet("Learjet 45XR", 535, 2300, 5500000);
+	hangar[3] = new Jet("Beechcraft Premier IA", 526, 1645, 2100000);
+	hangar[4] = new Jet("Cessna Citation CJ4", 519 , 2259, 7350000);
 	}
 	
 	public JoesAirplaneSalvage() {
@@ -27,6 +27,7 @@ public class JoesAirplaneSalvage extends Jet{
 
 
 	public void list(){
+		System.out.println("The fleet consist of :");
 		for(int i = 0; i < hangar.length; i++){
 			if(hangar[i] == null){
 				break;
@@ -70,10 +71,10 @@ public class JoesAirplaneSalvage extends Jet{
 		speed = kb.nextDouble();
 		System.out.print("Range : ");
 		distance = kb.nextDouble();
-		System.out.print("Capacity(people - pilot) : ");
-		cap = kb.nextInt();
+		System.out.print("Price : ");
+		int price = kb.nextInt();
 		
-		hangar[counter] = new Jet(model, speed, distance, cap);
+		hangar[counter] = new Jet(model, speed, distance, price);
 		System.out.println(hangar[counter]);
 		counter++;
 	}
