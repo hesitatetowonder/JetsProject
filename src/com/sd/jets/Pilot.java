@@ -19,7 +19,7 @@ public class Pilot {
 			break;
 		}
 		case 4 :{
-			randomPilot = "Chris";
+			randomPilot = "Kris";
 			break;
 		}
 		case 5 :{

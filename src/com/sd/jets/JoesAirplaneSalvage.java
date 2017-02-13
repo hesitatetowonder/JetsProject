@@ -7,6 +7,7 @@ import java.util.Scanner;
 public class JoesAirplaneSalvage {
 	Scanner kb = new Scanner(System.in);
 	Pilot ace = new Pilot();
+	Jet f = new Jet();
 	double mph;
 	double mach = mph * .001303;
 	int counter = 5;
@@ -40,7 +41,6 @@ public class JoesAirplaneSalvage {
 	}	
 
 	public void fastest(){
-		Jet f = new Jet();
 		for (int i = 0; i< hangar.length; i++){
 			if (hangar[i] == null){
 				break;
@@ -53,7 +53,6 @@ public class JoesAirplaneSalvage {
 	}
 	
 	public void longest(){
-		Jet f = new Jet();
 		for (int i = 0; i< hangar.length; i++){
 			if (hangar[i] == null){
 				break;
@@ -77,7 +76,7 @@ public class JoesAirplaneSalvage {
 		int price = kb.nextInt();
 		System.out.print("Please hire a pilot for your Jet. If you have your own pilot,");
 		System.out.println("please enter his/her name below.  Or choose from one of our");
-		System.out.print("Steve, Rob, Aaron, Chris and Cole.  Enter name : ");
+		System.out.print("Steve, Rob, Aaron, Kris and Cole.  Enter name : ");
 		String pilot = kb.next();
 		
 		

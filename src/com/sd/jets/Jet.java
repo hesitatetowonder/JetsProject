@@ -1,9 +1,9 @@
 package com.sd.jets;
 
 public class Jet{
-	protected String model;
-	protected double speed, distance;
-	protected int price;
+	private String model;
+	private double speed, distance;
+	private int price;
 	protected String pilot;
 
 	public Jet(String model, double speed, double distance, int price){
